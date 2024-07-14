@@ -42,7 +42,7 @@ func formHandler(w http.ResponseWriter, r *http.Request){
 	if err := r.ParseForm(); err != nil {
 		fmt.Fprintf(w, "parseForm error: %v", err)
 	}
-	fmt.Fprintf(w, "POST request successful")
+	fmt.Fprintf(w, "POST request successful\n")
 	name := r.FormValue("name")
 	address := r.FormValue("address")
 	fmt.Fprintf(w, "name = %s\n", name)
